@@ -9,30 +9,30 @@ public class User {
     private  String position;
 
 
-//    public User(String UserName, String phone, String position){
-//        this.UserName = UserName;
-//        this.phone_no = phone_no;
-//        this.position=position;
-//    }
-//
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public String getUserName() {
-//        return UserName;
-//    }
-//
-//    public String getPhone_no() {
-//        return phone_no;
-//    }
-//
-//    public String getPosition() {
-//        return position;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
+    public User(String UserName, String phone, String position){
+        this.UserName = UserName;
+        this.phone_no = phone_no;
+        this.position=position;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getUserName() {
+        return UserName;
+    }
+
+    public String getPhone_no() {
+        return phone_no;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setId(int id) {
+        this.id = id;
 //    }
 //
 //    public void setUserName(String userName) {
