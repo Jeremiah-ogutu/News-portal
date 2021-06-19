@@ -22,4 +22,16 @@ public class News {
     public int getId() {
         return id;
     }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
