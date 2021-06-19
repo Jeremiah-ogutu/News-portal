@@ -24,4 +24,16 @@ public class Department {
     public String getDescription() {
         return description;
     }
+
+    public void setDepartment_name(String department_name) {
+        this.department_name = department_name;
+    }
+
+    public void setNo_of_Employees(String no_of_Employees) {
+        No_of_Employees = no_of_Employees;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
