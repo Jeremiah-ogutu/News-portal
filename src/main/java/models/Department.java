@@ -13,6 +13,15 @@ public class Department {
         this.No_of_Employees=no_of_employees;
     }
 
+    public String getDepartment_name() {
+        return department_name;
+    }
 
+    public String getNo_of_Employees() {
+        return No_of_Employees;
+    }
 
+    public String getDescription() {
+        return description;
+    }
 }
