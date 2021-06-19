@@ -11,5 +11,15 @@ public class News {
         this.content=content;
     }
 
+    public String getTitle() {
+        return title;
+    }
 
+    public String getContent() {
+        return content;
+    }
+
+    public int getId() {
+        return id;
+    }
 }
