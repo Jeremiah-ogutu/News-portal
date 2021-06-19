@@ -1,4 +1,4 @@
 package dao;
 
-public class DepartmentDao {
+public interface DepartmentDao {
 }
