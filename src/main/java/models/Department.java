@@ -7,6 +7,7 @@ public class Department {
     private  String department_name;
     private String No_of_Employees;
     private  String description;
+    private int id;
 
 
     public  Department( String department_name, String no_of_employees, String description) {
@@ -52,5 +53,9 @@ public class Department {
     @Override
     public int hashCode() {
         return Objects.hash(department_name, No_of_Employees, description);
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

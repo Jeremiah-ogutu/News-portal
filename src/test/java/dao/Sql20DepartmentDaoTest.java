@@ -4,10 +4,14 @@ import models.Department;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.sql2o.Connection;
+import org.sql2o.Sql2o;
 
 import static org.junit.Assert.*;
 
-public class Sql20DepartmentDaoTest {
+public class Sql20DepartmentDaoTest<Sql2oDepartmentDao> {
+    private Connection conn;
+    private Sql2oDepartmentDao departmentDao;
 
     @Before
     public  void setUp() throws  Exception{
@@ -20,9 +24,9 @@ public class Sql20DepartmentDaoTest {
     }
 
     @Test
-    public void getAll(){
+    public void addingDepartmentSetsId()throws Exception{
         Department department = setUpDepartment();
-        assertTrue(departmentDao.getAll().contains(department));
+        assertNotEquals(0,testRestaurant.getId());
     }
 
     @Test

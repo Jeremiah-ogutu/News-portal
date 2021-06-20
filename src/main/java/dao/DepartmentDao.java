@@ -5,7 +5,7 @@ import models.Department;
 import java.util.List;
 
 public interface DepartmentDao {
-    Void add (Department department );
+    void add (Department department );
 
     List<Department> getAll();
 
