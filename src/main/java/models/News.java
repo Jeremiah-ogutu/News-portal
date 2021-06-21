@@ -4,9 +4,9 @@ public class News {
 
     private String title;
     private  String content;
-    private  int id;
+    private int id;
 
-    public News (String titlei, String content){
+    public News (String title, String content){
         this.title=title;
         this.content=content;
     }
@@ -34,4 +34,5 @@ public class News {
     public void setId(int id) {
         this.id = id;
     }
+
 }
