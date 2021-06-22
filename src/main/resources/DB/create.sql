@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS news (
  id int PRIMARY KEY auto_increment,
  title VARCHAR,
  content VARCHAR,
- id int
+
 );
 
 
