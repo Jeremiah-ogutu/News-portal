@@ -51,4 +51,7 @@ public class News {
     public int hashCode() {
         return Objects.hash(title, content, id);
     }
+
+//    public String getAll() {
+//    }
 }

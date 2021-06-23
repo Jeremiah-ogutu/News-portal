@@ -1,7 +1,7 @@
 ##Author
-Jeremiah.J.Ogutu
 
-## NEWS_PORTAL
+Jeremiah.J.Ogutu
+ NEWS_PORTAL
 
 An app for the forest service to track animals for an environmental impact study.
 

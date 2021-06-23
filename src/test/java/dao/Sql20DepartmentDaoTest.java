@@ -10,32 +10,47 @@
 //import static org.junit.Assert.*;
 //
 //public class Sql20DepartmentDaoTest {
-//    private  static  Connection conn;
-//    private  static  Sql20DepartmentDao sql20DepartmentDao;
+//    private static Connection conn;
+//    private static Sql20DepartmentDao departmentDao;
 //
 //    @Before
-//    public  void setUp() throws  Exception{
-//        String connectionString = "jdbc:h2:~/jadle.db;INIT=RUNSCRIPT from 'classpath:DB/create.sql'";
-//        Sql2o sql2o = new Sql2o(connectionString, "", "");
-//        sql20DepartmentDao = new Sql20DepartmentDao(sql2o);
+//    public void setUp( ) throws Exception {
+//        String connectionString = "jdbc:postgresql://localhost:5432/news_potal";
+//        Sql2o sql2o = new Sql2o(connectionString, "moringa", "Access");
+//        departmentDao= new Sql20DepartmentDao(sql2o);
 //        conn = sql2o.open();
+//
 //
 //    }
 //
 //    @After
-//    public void tearDown() throws Exception{
-//        sql20DepartmentDao.clearAll();
+//    public void tearDown() throws Exception {
+//        departmentDao.clearAll();
 //        conn.close();
 //    }
-//
+
+
+
+
 //    @Test
-//    public void getAll() {
-//        Department department = setUp(Sql20Department);
-//        assertTrue(sql20DepartmentDao.getAll().contains(department));
+//    public void getAll() throws Exception {
+//        Sql20DepartmentDaoTest department1 = setupDepartmentDao();
+//        Sql20DepartmentDaoTest department2 = setupDepartment();
+//        assertEquals(2, Sql20DepartmentDao.getAll().size());
 //    }
 //
-////
-////
-////
-////
-////}
+//
+//    @Test
+//    public void findById() throws Exception {
+//        Department department = setUp(sql20DepartmentDao);
+//        assertTrue(sql20DepartmentDao.getAll().contains(department));
+//    }
+
+//
+//}
+
+//
+//
+//
+//
+//}

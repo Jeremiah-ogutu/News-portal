@@ -18,7 +18,7 @@ public class App{
         Sql20DepartmentDao sql20DepartmentDao;
         Sql20NewsDao sql20NewsDao;
         Sql20UserDao sql20UserDao;
-        Connection conn;
+        Connection con;
         Gson gson = new Gson();
 
 
@@ -28,7 +28,7 @@ public class App{
         sql20UserDao = new Sql20UserDao(sql2o);
         sql20DepartmentDao = new  Sql20DepartmentDao(sql2o);
         sql20NewsDao = new Sql20NewsDao(sql2o);
-        conn = sql2o.open();
+        con = sql2o.open();
 
 //
 //        get("/users", "application/json",(req,res)->{
@@ -62,12 +62,18 @@ public class App{
         });
 
 
-        get("/departments", "application/json",(req, res) ->{
-            if(sql20DepartmentDao.getAll().size() < 0){
-                throw new ApiException(404, String.format("notAvailableMsg","departments"));
-            }
+//        get("/departments/:id", "application/json",(req, res) ->{
+//            if(sql20DepartmentDao.getAll().size() < 0){
+//                throw new ApiException(404, String.format("notAvailableMsg","departments"));
+//            }
+//            res.type("application/json");
+//            return gson.toJson(sql20DepartmentDao.getAll());
+//        });
+        get("/departments/:id", "application/json", (req, res) -> { //accept a request in format JSON from an app
             res.type("application/json");
-            return gson.toJson(sql20DepartmentDao.getAll());
+            int departmentId = Integer.parseInt(req.params("id"));
+            res.type("application/json");
+            return gson.toJson(sql20DepartmentDao.findById(departmentId ));
         });
 
 
@@ -91,16 +97,16 @@ public class App{
             return gson.toJson(user);
         });
 
-//        post("/news/new", "application/json", (req, res)->{
-//            News news = gson.fromJson(req.body(), News.class);
-//            if(news == null || news.getNews() == null){
-//                throw new ApiException(404, String.format("cannotBeEmptyMsg","User"));
-//            }
-//            sql20NewsDao.add(news);
-//            res.type("application/json");
-//            res.status(201);
-//            return gson.toJson(news);
-//        });
+        post("/news/new", "application/json", (req, res)->{
+            News news = gson.fromJson(req.body(), News.class);
+            if(news == null || news.getContent () == null){
+                throw new ApiException(404, String.format("cannotBeEmptyMsg","User"));
+            }
+            sql20NewsDao.add(news);
+            res.type("application/json");
+            res.status(201);
+            return gson.toJson(news);
+        });
 
         post("/department/new", "application/json", (req, res) -> {
             Department department = gson.fromJson(req.body(), Department.class);

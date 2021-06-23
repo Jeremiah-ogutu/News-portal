@@ -1,15 +1,25 @@
+//plugins {
+//    id 'java'
+//    id 'application'
+//
+//}
+//
+//group 'Newsportal'
+//version '1.0-SNAPSHOT'
+//
+//
+//sourceCompatibility = 1.8
+
 plugins {
     id 'java'
     id 'application'
-
 }
-
-group 'Newsportal'
 version '1.0-SNAPSHOT'
-
-//mainClass ='App'
-
 sourceCompatibility = 1.8
+
+mainClassName = "App"
+
+//mainClassName = "App"
 
 
 

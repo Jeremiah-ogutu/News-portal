@@ -41,9 +41,11 @@ public class Sql20UserDao implements  UserDao{
 
     @Override
     public List<User> getUserById(int id) {
+        String sql = "SELECT * FROM users WHERE id = :userId";
         try (Connection con = sql2o.open()) {
-            return con.createQuery("SELECT * FROM users WHERE id = :userId")
+            return con.createQuery(sql)
                     .addParameter("userId", id)
+                    .throwOnMappingFailure(false)
                     .executeAndFetch(User.class);
         }
     }
