@@ -35,11 +35,11 @@ public class DepartmentTest {
     }
 
 
-    @Test
-    public void getDescription() {
-        Department testDepartment = setupDepartment();
-        assertEquals("In charge of running sports segments", testDepartment.getDescription());
-    }
+//    @Test
+//    public void getDescription() {
+//        Department testDepartment = setupDepartment();
+//        assertEquals("In charge of running sports segments", testDepartment.getDescription());
+//    }
 
 //    @Test
 //    public void setDescription() {

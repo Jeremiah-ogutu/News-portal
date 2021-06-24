@@ -21,44 +21,18 @@ public class UserTest {
     }
 
     @Test
-    public void getU_name() {
+    public void getUser_name() {
         User testUser = setupUser();
-        assertEquals("John", testUser.getUserName());
+        assertEquals("John", testUser.getUsername());
     }
 
     @Test
-    public void setU_name() {
+    public void setUser_name() {
         User testUser = setupUser();
-        testUser.setUserName("Mark");
-        assertNotEquals("John", testUser.getUserName());
+        testUser.setUsername("Mark");
+        assertNotEquals("John", testUser.getUsername());
     }
 
-
-//    @Test
-//    public void getRole() {
-//        User testUser = setupUser();
-//        assertEquals("Editor", testUser.getRole());
-//    }
-
-//    @Test
-//    public void setRole() {
-//        User testUser = setupUser();
-//        testUser.setRole("News Anchor");
-//        assertNotEquals("Editor", testUser.getRole());
-//    }
-
-//    @Test
-//    public void getUserById() {
-//        User testUser = setupUser();
-//        assertEquals(1, testUser.getUserById());
-//    }
-
-//    @Test
-//    public void setDepartment_id() {
-//        User testUser = setupUser();
-//        testUser.setDepartment_id(2);
-//        assertNotEquals(1, testUser.getDepartment_id());
-//    }
 
     @Test
     public void setId() {
