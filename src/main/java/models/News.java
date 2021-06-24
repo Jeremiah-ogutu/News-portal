@@ -49,7 +49,7 @@ public class News {
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, content, id);
+        return Objects.hash(title, content);
     }
 
 //    public String getAll() {

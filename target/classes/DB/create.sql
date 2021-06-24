@@ -2,7 +2,7 @@ SET MODE PostgreSQL;
 
 CREATE TABLE IF NOT EXISTS users (
  id int PRIMARY KEY auto_increment,
- username VARCHAR,
+ UserName VARCHAR,
  phone_no VARCHAR,
 postion VARCHAR,
 );

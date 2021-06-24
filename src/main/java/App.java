@@ -14,7 +14,21 @@ import java.util.Map;
 import static spark.Spark.*;
 
 public class App{
-    public  static  void  main(String[]args){
+
+
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
+
+
+
+        public  static  void  main(String[]args){
+            getHerokuAssignedPort();
+
         Sql20DepartmentDao sql20DepartmentDao;
         Sql20NewsDao sql20NewsDao;
         Sql20UserDao sql20UserDao;
@@ -88,7 +102,7 @@ public class App{
 
         post("/users/new", "application/json", (req, res)->{
             User user = gson.fromJson(req.body(), User.class);
-            if(user == null || user.getUserName() == null){
+            if(user == null || user.getUsername() == null){
                 throw new ApiException(404, String.format("cannotBeEmptyMsg","User"));
             }
             sql20UserDao.addUser(user);

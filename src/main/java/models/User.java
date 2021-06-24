@@ -4,13 +4,13 @@ import java.util.Objects;
 
 public class User {
     private int id;
-    private  String UserName;
+    private  String username;
     private  String  phone_no;
     private  String position;
 
 
-    public User(String UserName, String phone, String position){
-        this.UserName = UserName;
+    public User(String username, String phone_no, String position){
+        this.username = username;
         this.phone_no = phone_no;
         this.position=position;
     }
@@ -19,8 +19,8 @@ public class User {
         return id;
     }
 
-    public String getUserName() {
-        return UserName;
+    public String getUsername() {
+        return username;
     }
 
     public String getPhone_no() {
@@ -36,8 +36,8 @@ public class User {
     }
 
 
-    public void setUserName(String userName) {
-        UserName = userName;
+    public void setUsername(String username) {
+       this. username = username;
     }
 
     public void setPhone_no(String phone_no) {
@@ -54,14 +54,14 @@ public class User {
         if (!(o instanceof User)) return false;
         User user = (User) o;
         return id == user.id &&
-                UserName.equals(user.UserName) &&
+                username.equals(user.username) &&
                 phone_no.equals(user.phone_no) &&
                 position.equals(user.position);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, UserName, phone_no, position);
+        return Objects.hash(id, username, phone_no, position);
     }
 
 
