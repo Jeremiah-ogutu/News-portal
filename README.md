@@ -3,7 +3,7 @@
 Jeremiah.J.Ogutu
  NEWS_PORTAL
 
-An app for the forest service to track animals for an environmental impact study.
+An application that allows one to add more users, add departments, add users to those departments, 
 
 ### Description
 
